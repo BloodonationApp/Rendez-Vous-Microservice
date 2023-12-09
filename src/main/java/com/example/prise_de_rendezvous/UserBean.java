@@ -1,12 +1,12 @@
 package com.example.prise_de_rendezvous;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class UserBean {
     private Long id;
     //@NotNull(message = "L'email est obligatoire !")
