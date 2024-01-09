@@ -30,6 +30,11 @@ public class RendezVousController {
         return rendezVousService.listByUserName(username);
     }
 
+    @GetMapping("/findAll")
+    public List<RendezVous> findAll(){
+        return rendezVousService.findAll();
+    }
+
     @GetMapping("/getPdf/{username}/{reference}")
     public Document prendreRendezvous(@PathVariable("username")String nom,@PathVariable("reference")String ref,HttpServletResponse response) throws IOException, DocumentException {
         return rendezVousService.exportPDF(nom,ref,response);

@@ -10,4 +10,5 @@ public interface RendezVousRepo extends JpaRepository<RendezVous,Long> {
     RendezVous findByReference(String reference);
 
     List<RendezVous> findRendezVousByNomDonneur(String name);
+    List<RendezVous> findAll();
 }

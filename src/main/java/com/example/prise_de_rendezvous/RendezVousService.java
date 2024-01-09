@@ -37,7 +37,7 @@ public class RendezVousService {
             paragraph.setAlignment(Paragraph.ALIGN_CENTER);
             Font font1= FontFactory.getFont(FontFactory.HELVETICA);
             font1.setSize(15);
-            Paragraph paragraph1=new Paragraph("\nNom complet : "+nom+"\nGroupe Sanguin : "+userBean.getGroupeSanguin()+"\nAge : "+userBean.getAge()+"\nAdresse du centre : "+rendezVous.getAdresse()+"\nDate de rendez-vous : "+rendezVous.getDate());
+            Paragraph paragraph1=new Paragraph("\nNom complet : "+nom+"\nGroupe Sanguin : "+userBean.getGroupeSanguin()+"\nAge : "+userBean.getAge()+"\nVille : "+rendezVous.getVille()+"\nCentre : "+rendezVous.getCentre()+"\nDate de rendez-vous : "+rendezVous.getDate());
             paragraph1.setAlignment(Paragraph.ALIGN_LEFT);
             Font font2= FontFactory.getFont(FontFactory.HELVETICA);
             font2.setSize(15);
@@ -62,7 +62,7 @@ public class RendezVousService {
         paragraph.setAlignment(Paragraph.ALIGN_CENTER);
         Font font1= FontFactory.getFont(FontFactory.HELVETICA);
         font1.setSize(15);
-        Paragraph paragraph1=new Paragraph("\nNom complet : "+nom+"\nGroupe Sanguin : "+userBean.getGroupeSanguin()+"\nAge : "+userBean.getAge()+"\nAdresse du centre : "+rendezVous.getAdresse()+"\nDate de rendez-vous : "+rendezVous.getDate());
+        Paragraph paragraph1=new Paragraph("\nNom complet : "+nom+"\nGroupe Sanguin : "+userBean.getGroupeSanguin()+"\nAge : "+userBean.getAge()+"\nVille : "+rendezVous.getVille()+"\nCentre : "+rendezVous.getCentre()+"\nDate de rendez-vous : "+rendezVous.getDate());
         paragraph1.setAlignment(Paragraph.ALIGN_LEFT);
         Font font2= FontFactory.getFont(FontFactory.HELVETICA);
         font2.setSize(15);
@@ -78,5 +78,8 @@ public class RendezVousService {
 
     public List<RendezVous> listByUserName(String name){
         return rendezVousRepo.findRendezVousByNomDonneur(name);
+    }
+    public List<RendezVous> findAll(){
+        return rendezVousRepo.findAll();
     }
 }

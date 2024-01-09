@@ -14,7 +14,8 @@ public class RendezVous {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
 
     private Long id;
-    private String adresse;
+    private String Ville;
+    private String Centre;
     private String reference;
     private String nomDonneur;
     private String date;
